@@ -48,4 +48,5 @@ scrollToTopBtn.addEventListener('click', () => {
     top: 0,
   });
 });
+console.log("done!")
 // ============================================
