@@ -1,0 +1,22 @@
+{
+    "about":{
+        "content":"<div class='about'><h2>ما الخدمات المتاحه على الموقع ؟</h2><p>نحن مكتب التنسيق الرقمي , نعمل على توفير خدمات التنسيق لطلاب الثانوية العامة وما يعادلها بشكل إلكتروني سهل وسريع. يهدف موقعنا إلى مساعدة الطلاب في إدخال رغباتهم ومتابعة نتائج التنسيق بكل شفافية ودقة، مع تقديم إرشادات واضحة حول الإجراءات والخدمات المختلفة المتعلقة بالقبول الجامعي. نحن نسعى دائمًا إلى تطوير خدماتنا الرقمية لتلبية احتياجات الطلاب وتسهيل رحلتهم التعليمية منذ لحظة التقديم وحتى ظهور النتائج.</p></div>",
+        "title": "عن الموقع"
+    },
+    "services":{
+        "content":"<div class='services'><div class='col-1'><form target='_self'><h2>تسجيل الرغبات</h2><p>أدخل رقم الجلوس والرقم السري لبدء عملية تسجيل الرغبات</p><label for='inp-setnum'>رقم الجلوس</label><input type='number' placeholder='مثال: 163205' id='inp-setnum' required><label for='inp-pass'>الرقم السري</label><input type='number' placeholder='الرقم السري' id='inp-pass' required><label for='inp-code'>كود التحقق</label><input type='number' placeholder='ادخل الكود' id='inp-code' required><button id='check-btn'>طلب كود للتحقق</button><input type='submit' value='دخول' id='submit'><a href='plainpages.html?page=secret'>الحصول على الرقم السري</a></form><div><h2>ملاحظات مهمة</h2><p>تأكد من حفظ الرقم السري وعدم مشاراكته مع شخص اخر ، وتنزيل ملف الرغبات النهائي (PDF/PNG)، والتأكد من ترتيب رغباتك قبل الإرسال.</p></div></div><div class='col-2'><h2>بحوثات ذات صله</h2><a href='plainpages.html?page=tansik'>- نتائج التنسيق</a><a href='plainpages.html?page=tansik'>- الحدود الدنيا</a><a href='plainpages.html?page=tansik'>- تقليل الاغتراب</a><a href='plainpages.html?page=secret'>- كيفيه الحصول على الرقم السري</a></div></div>",
+        "title": "الخدمات"
+    },
+    "tansik":{
+        "content":"<div class='tansik'><div class='col-1'><div id='min'><h2>الحدود الدنيا <i class='fa-solid fa-file'></i></h2><a href='#'>اضغط هنا للحصول على الحدود الدنيا هذا العام والاعوام السابقه</a></div><div id='top'><h2>اوائل الشعب <i class='fa-solid fa-trophy'></i></h2><a href='#'>اضغط هنا لمعرفه اوائل الشعب هذا العام والاعوام السابقه</a></div></div><div class='col-2'><div id='dalil1'><h2>دليل الطالب <i class='fa-solid fa-calendar'></i></h2><a href='#'>اضغط هنا لمعرفه الاوراق والمستندات المطلوبه</a></div><div id='dalil2'><h2>دليل القبول بالكليات والمعاهد <i class='fa-solid fa-calendar-days'></i></h2><a href='#'>اضفط هنا لمعرفه تفاصيل المعاهد والمصاريف الخ...</a></div></div></div>",
+        "title":"التنسيق والحدود الدنيا"
+    },
+    "results":{
+        "content":"<div class='results'><h2>نتيجة التنسيق</h2><p>استعلم بالرقم السري أو رقم الجلوس</p><form class='result-form'><input type='number' placeholder='رقم الجلوس' required><input type='number' placeholder='الرقم السري' required><input type='submit' value='استعلام'></form><div class='result-box'><h2>الترشيح الحالي</h2><p>الرجاء الضغط على استعلام لإظهار نتيجة التنسيق - بطاقة الترشيح</p></div></div>",
+        "title":"نتائج التنسيق"
+    },
+    "secret":{
+        "content":"<div class=\"secret-code\"> <div class=\"secret-form-box\"> <h2>نموذج الاسترجاع</h2> <form class=\"secret-form\"> <input type=\"number\" placeholder=\"رقم الجلوس\" required> <input type=\"submit\" value=\"استمرار للتحقق من الهوية\"> </form> </div> <div class=\"secret-info-box\"> <h2>الحصول على الرقم السري</h2> <p>اتبع الخطوات التالية لإصدار أو استخراج الرقم السري.</p> <ol> <li>أدخل رقم الجلوس وبيانات الاستمارة.</li> <li>تحقق من هوية الطالب.</li> <li>ستظهر لك تعليمات استلام الرقم السري.</li> </ol> </div> </div>",
+        "title":"الحصول على الرقم السري"
+    }
+}

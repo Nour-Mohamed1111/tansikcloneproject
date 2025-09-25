@@ -1,0 +1,663 @@
+:root{
+      --bg:#f6fbfb;
+      --primary:#0f6b67;
+      --primary-2:#2aa89b9a;
+      --font-primary:#083230;
+      --font-primary-2:#1c8d87;
+      --card-main:#E9F6F5;
+      --card-circle:#CFE6E4;
+      --card-square:#CFEEEE;
+      --card-line:#DFF2F1;
+      --radius:16px;
+      --container:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{
+    scroll-behavior: smooth;
+}
+body{
+      font-family:'Cairo',system-ui,Arial;
+      background:linear-gradient(180deg, var(--bg), #eef7f6);
+      -webkit-font-smoothing:antialiased;
+      direction:rtl;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: var(--container);
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* header start */
+header{
+    position: fixed;
+    background:linear-gradient(180deg, var(--bg), #eef7f6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .3rem solid var(--primary);
+    border-radius: var(--radius);
+    padding: 1rem;
+    width: 100%; 
+    max-width: var(--container);
+    z-index: 999;
+}
+header > a > img{
+    max-width: 100px;
+}
+header nav{
+    padding: 0.5rem 2rem;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+nav ul li{
+    margin-left: 20px;
+}
+nav ul li a{
+    color: var(--font-primary);
+    transition: all ease .3s;
+}
+nav ul li a:hover{
+    background-color: var(--primary-2);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+}
+nav .active{
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+}
+/* header end */
+/* main start */
+/* hero start */
+main .hero{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:118px;
+    position: relative;
+}
+main .hero .hero-content{
+    width: 50%;
+}
+main .hero .hero-content h1{
+    color: var(--font-primary);
+}
+main .hero .hero-content p{
+    color: var(--font-primary-2);
+    margin: 1rem 0 2rem 0;
+}
+main .hero .hero-content a{
+    color: #fff;
+    background-color: var(--primary);
+    padding: 10px 16px;
+    border-radius: var(--radius);
+}
+main .hero #egy-flag{
+    width: 200px;
+    position: absolute;
+    top:90px;
+    left: -40px;
+    z-index: -1;
+}
+.arrow,.menu{
+    display: none;
+    position: fixed;
+    top:0;
+    right: 0;
+    border-radius: .5rem 0 0 .5rem;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+}
+/* hero end */
+/* cards start */
+main .cards{
+    position: relative;
+    padding-top:118px;
+    margin-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+main .cards .card{
+    min-width: fit-content;
+    height: 200px;
+    background-color: #fff;
+    border-radius: var(--radius);
+    padding: 10px 16px;
+    transition: scale ease .5s;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(12, 38, 36, 0.06);
+}
+main .cards .card:hover{
+    scale: 1.1;
+}
+main .cards .card .card-container{
+    width: 100%;
+    background-color: var(--card-main);
+    height: 100%;
+    border-radius: var(--radius);
+    padding: 10px 16px;
+}
+main .cards .card .card-container .shapes-container{
+    max-width: 100%;
+    display: grid;
+    grid-template-areas:
+    "square square circle"
+    "line line line";
+}
+main .cards .card .card-container .shapes-container .circle{
+    background-color: var(--card-circle);
+    margin: 0 .5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    grid-area: circle;
+}
+main .cards .card .card-container .shapes-container .square{
+    background-color: var(--card-square);
+    width: 100%;
+    height: 50px;
+    border-radius: var(--radius);
+    grid-area: square;
+}
+main .cards .card .card-container .shapes-container .line{
+    width: 80%;
+    height: 10px;
+    background-color: var(--card-line);
+    border-radius: var(--radius);
+    grid-area: line;
+    margin-top: .5rem ;
+}
+main .cards .card .card-container p{
+    margin-bottom: 1.5rem;
+    color: var(--font-primary);
+}
+main .cards .card .card-container a{
+    color: #fff;
+    background-color: var(--primary);
+    padding: 10px 16px;
+    border-radius: var(--radius);
+}
+.cards #egy-flag{
+    width: 500px;
+    position: absolute;
+    bottom: -6rem;
+    right: 1rem;
+    z-index: -1;
+    rotate: 180deg;
+}
+/* cards end */
+/* main end */
+/* footer start */
+footer{
+    background-color: var(--card-main);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 2rem;
+    padding: 16px;
+    border-top:5px solid var(--primary);
+    border-radius: var(--radius);
+}
+footer h2{
+    color: var(--font-primary);
+}
+footer p{
+    color: var(--font-primary-2);
+}
+footer .col-1{
+    width: 60%;
+}
+footer .col-2 i{
+    color: var(--font-primary);
+}
+/* footer end */
+/* about start */
+.about{
+    height: calc(100vh - 202px);
+    padding:150px 1rem 0 0;
+}
+.about h2{
+    color: var(--font-primary);
+}
+.about p{
+    color: var(--font-primary-2);
+}
+/* about end */
+/* services start */
+.services {
+    padding: 130px 1rem 0 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.services .col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+.services .col-1 form{
+    background-color: #fff;
+    border-radius: var(--radius);
+    padding: 10px 16px;
+    box-shadow: 0 6px 20px rgba(12, 38, 36, 0.158);
+}
+.services .col-1 form h2, .services .col-1 form label{
+    color: var(--font-primary);
+}
+.services .col-1 form p{
+    color: var(--font-primary-2);
+    margin-bottom: 1rem;
+}
+.services .col-1 form input{
+    width: 100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid var(--primary);
+    margin: 1rem 0;
+}
+.services .col-1 form #check-btn{
+    padding: 1rem;
+    border-radius: var(--radius);
+    background-color: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    width: 50%;
+}
+.services .col-1 form #submit{
+    cursor: pointer;
+    background-color: var(--primary);
+    color: #fff;
+}
+.services .col-1 form a{
+    color: var(--font-primary-2);
+}
+.services .col-1 div{
+    background-color: #fff;
+    box-shadow: 0 6px 20px rgba(12, 38, 36, 0.158);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+.services .col-1 div h2{
+    color: var(--font-primary);
+}
+.services .col-1 div p{
+    color: var(--font-primary-2);
+}
+.services .col-2{
+    background-color: #fff;
+    box-shadow: 0 6px 20px rgba(12, 38, 36, 0.158);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin: 1rem 0;
+    max-height: fit-content;
+    width: 100%;
+}
+.services .col-2 a{
+    display: block;
+    color: var(--font-primary-2);
+}
+/* services end */
+/* tansik start */
+.tansik{
+    padding: 150px 1rem;
+    display: flex;
+    margin: auto;
+}
+.tansik .col-1, .tansik .col-2{
+    width: 50%;
+}
+.tansik .col-1 #min, .tansik .col-1 #top,.tansik .col-2 #dalil1 ,.tansik .col-2 #dalil2{
+    height: 250px;
+    width: 80%;
+    background-color: var(--card-main);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 20px rgba(12, 38, 36, 0.158);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    transition: all ease .5s;
+
+}
+.tansik .col-1 #min:hover, .tansik .col-1 #top:hover,.tansik .col-2 #dalil1:hover ,.tansik .col-2 #dalil2:hover{
+    scale: 1.1;
+}
+.tansik .col-1 #min h2, .tansik .col-1 #top h2,.tansik .col-2 #dalil1 h2 ,.tansik .col-2 #dalil2 h2{
+    color: var(--font-primary);
+}
+.tansik .col-1 #min a, .tansik .col-1 #top a,.tansik .col-2 #dalil1 a ,.tansik .col-2 #dalil2 a{
+    color: var(--font-primary-2);
+}
+.tansik .col-2{
+    margin-top: 2rem;
+}
+ .tansik .col-1 #top{
+    margin-right: 1rem;
+}
+.tansik .col-2 #dalil2{
+margin-right: 1rem;
+}
+/* tansik end */
+/* result start */
+.results{
+    max-width: 800px;
+    margin: 150px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 20px rgba(12, 38, 36, 0.158);
+}
+.results h2 {
+  color: var(--font-primary);
+  margin-bottom: 10px;
+}
+.results p {
+  color: var(--font-primary-2);
+  margin-bottom: 20px;
+}
+.result-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.result-form input[type="number"] {
+  flex: 1 1 35%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.result-form input[type="submit"] {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.result-box {
+  background-color: #fff;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.result-box h2 {
+  color: var(--font-primary);
+  margin-bottom: 10px;
+}
+.result-box p {
+  color: var(--font-primary-2);
+  margin: 0;
+}
+/* result end */
+/* secret pass start */
+.secret-code {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 150px auto;
+  padding: 20px;
+}
+.secret-form-box,
+.secret-info-box {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.secret-form-box h2,
+.secret-info-box h2 {
+  margin-bottom: 15px;
+  color: var(--font-primary);
+  font-size: 20px;
+}
+.secret-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.secret-form input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: right;
+}
+.secret-form input[type="submit"] {
+  padding: 10px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.secret-info-box p {
+  margin-bottom: 10px;
+  color: var(--font-primary);
+}
+.secret-info-box ol {
+  padding-right: 20px;
+  list-style-position: inside;
+  color: var(--font-primary-2);
+}
+.secret-info-box li {
+  margin-bottom: 8px;
+}
+/* secret pass end */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1001;
+  border: none;
+  outline: none;
+  background-color: var(--primary-2);
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: var(--primary);
+}
+
+/* ------------- Resbonsive ------------------ */
+@media (min-width:535px) and (max-width:768px){
+/* header start */
+    header{
+        width: 50%;
+        border-left:.3rem solid var(--primary) ;
+        flex-direction: column;
+        right: -360px;
+        transition: all ease .5s;
+    }
+    .HeaderOpend{
+        right: 0;
+    }
+    .HeaderOpend:hover{
+        right: 0;
+    }
+    .arrow {
+    display: block;
+    }
+    header nav ul{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 400px;
+    }
+    header nav ul li {
+        margin: auto;
+    }
+/* header end */
+/* main start */
+    main .hero{
+        justify-content:center;
+        padding-top: 0;
+    }
+    main .hero #egy-flag{
+        top: -30px;
+    }
+    main .hero #hero-img{
+        display: none;
+    }
+    main .hero .hero-content{
+        width: 80%;
+    }
+    /* cards start */
+    main .cards{
+        padding-top: 0;
+    }
+    /* cards end */
+    /* main end */
+    .about{
+        width: 90%;
+        margin: auto;
+        padding-top: 100px;
+    }
+    /* footer */
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 4rem;
+    }
+    /* footer end */
+    /* services */
+    .services{
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .services .col-1{
+        width: 100%;
+    }
+    /* services end */
+    /* results  */
+    .results{
+        margin: 6rem 3rem;
+    }
+    /* results end */
+    /* tansik */
+    .tansik{
+        flex-direction: column;
+        align-items: center;
+        padding :5rem;
+    }
+    .tansik .col-1, .tansik .col-2{
+    width: 100%;
+    }
+    .tansik .col-1 #min, .tansik .col-1 #top,.tansik .col-2 #dalil1 ,.tansik .col-2 #dalil2{
+        width: 100%;
+    }
+     .tansik .col-1 #top{
+    margin-right: 0rem;
+    }
+    .tansik .col-2 #dalil2{
+    margin-right: 0;
+    }
+    /* tansik end */
+}
+@media (max-width:535px) {
+    .arrow{
+        display: none;
+    }
+    .menu{
+        display: block;
+        z-index: 1000;
+    }
+    header{
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .HeaderOpend{
+        opacity: 1;
+        visibility: visible;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav ul li{
+        margin: auto;
+        margin-top: 1rem;
+    }
+    main .hero{
+        padding-top:0;
+        justify-content: center;
+        margin: auto;
+    }
+    main .hero .hero-content{
+        width: 80%;
+    }
+    main .hero #hero-img{
+        display: none;
+    }
+    main .hero #egy-flag{
+        top: -30px;
+    }
+    /* cards start */
+    main .cards{
+        padding-top: 0;
+    }
+    /* cards end */
+    /* footer */
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* footer end */
+    /* services */
+    .services{
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .services .col-1{
+        width: 100%;
+    }
+    /* services end */
+    /* results */
+    .results{
+        margin: 6rem 2rem;
+    }
+    /* results end */
+    /* tansik */
+    .tansik{
+        flex-direction: column;
+        align-items: center;
+        padding :5rem;
+    }
+    .tansik .col-1, .tansik .col-2{
+    width: 100%;
+    }
+    .tansik .col-1 #min, .tansik .col-1 #top,.tansik .col-2 #dalil1 ,.tansik .col-2 #dalil2{
+        width: 100%;
+    }
+     .tansik .col-1 #top{
+    margin-right: 0rem;
+    }
+    .tansik .col-2 #dalil2{
+    margin-right: 0;
+    }
+    /* tansik end */
+}
